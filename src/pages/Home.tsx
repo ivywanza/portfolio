@@ -84,7 +84,7 @@ const Home = () => {
                 className="relative"
               >
                 <img
-                  src="./public/revenue.jpg"
+                  src="./public/images/revenue.jpg"
                   alt="Professional headshot"
                   className="rounded-lg shadow-2xl"
                   loading="lazy"

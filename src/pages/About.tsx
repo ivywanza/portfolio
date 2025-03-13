@@ -73,7 +73,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="./public/official photo1.jpg"
+                src="./public/images/mypic.jpg"
                 alt="Profile"
                 className="rounded-lg shadow-xl"
               />
