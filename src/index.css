@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.hero-gradient {
+  @apply absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background;
+}
+
+.service-card {
+  @apply bg-card p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300;
+}
+
+.timeline-dot {
+  @apply absolute w-4 h-4 bg-primary rounded-full left-0 top-1/2 -translate-y-1/2;
+}
+
+.timeline-line {
+  @apply absolute w-0.5 bg-primary/20 h-full left-2 top-0;
+}
+
+.project-card {
+  @apply relative overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl;
+}
+
+.project-overlay {
+  @apply absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 transition-opacity duration-300;
+}
+
+.project-card:hover .project-overlay {
+  @apply opacity-100;
+}
+
+.testimonial-card {
+  @apply bg-card p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+.floating-cta {
+  @apply fixed bottom-4 right-4 bg-primary text-primary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300;
+}
+
+.section-heading {
+  @apply text-4xl font-bold mb-12 text-center;
+}
+
+.subsection-heading {
+  @apply text-2xl font-semibold mb-6;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600;
+}
