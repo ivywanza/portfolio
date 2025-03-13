@@ -84,7 +84,7 @@ const Home = () => {
                 className="relative"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1507679799987-c73779587ccf"
+                  src="./public/revenue.jpg"
                   alt="Professional headshot"
                   className="rounded-lg shadow-2xl"
                   loading="lazy"
